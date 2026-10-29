@@ -5,6 +5,28 @@ export default class ServiceDesk extends cds.ApplicationService {
 
     init() {
 
+        function calcularSLA(createdAt, dataFechamento) {
+
+            const inicio = new Date(createdAt)
+
+            const fim = dataFechamento
+                ? new Date(dataFechamento)
+                : new Date()
+
+            const horas = (fim - inicio) / (1000 * 60 * 60)
+
+            return {
+                slaStatus: horas <= 48
+                    ? 'Dentro do SLA'
+                    : 'Fora do SLA',
+
+                slaCriticidade: horas <= 48
+                    ? 3
+                    : 1
+            }
+
+        }
+
         const { Incidentes, Conversas } = this.entities
 
         this.on('fecharIncidente', async req => {
@@ -14,17 +36,28 @@ export default class ServiceDesk extends cds.ApplicationService {
             const incidente = await SELECT.one
                 .from(Incidentes)
                 .where({ ID: incidenteID })
+
             if (incidente.status_codigo === 'F') {
                 req.reject('O incidente já está fechado.')
             }
+
             if (!incidente.descricaoResolucao) {
                 req.reject('Informe a resolução antes de fechar o incidente!')
             }
 
+            const dataFechamento = new Date()
+
+            const sla = calcularSLA(
+                incidente.createdAt,
+                dataFechamento
+            )
+
             await UPDATE(Incidentes)
                 .set({
                     status_codigo: 'F',
-                    dataFechamento: new Date()
+                    dataFechamento,
+                    slaStatus: sla.slaStatus,
+                    slaCriticidade: sla.slaCriticidade
                 })
                 .where({ ID: incidenteID })
 
@@ -37,7 +70,6 @@ export default class ServiceDesk extends cds.ApplicationService {
         })
 
         this.on('reabrirIncidente', async req => {
-
 
             const incidenteID = req.params[0].ID
 
@@ -52,11 +84,11 @@ export default class ServiceDesk extends cds.ApplicationService {
             await UPDATE(Incidentes)
                 .set({
                     status_codigo: 'P',
-                    dataFechamento: null
+                    dataFechamento: null,
+                    slaStatus: null,
+                    slaCriticidade: null
                 })
                 .where({ ID: incidenteID })
-
-
 
             await INSERT.into(Conversas).entries({
                 mensagem: 'Status alterado para Em andamento.',
@@ -71,6 +103,9 @@ export default class ServiceDesk extends cds.ApplicationService {
             if (!req.data.status_codigo) {
                 req.data.status_codigo = 'N'
             }
+
+            req.data.slaStatus = 'Dentro do SLA'
+            req.data.slaCriticidade = 3
 
         })
 

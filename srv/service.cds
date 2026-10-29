@@ -7,15 +7,20 @@ service ServiceDesk {
             @Common.SideEffects: {
                 TargetProperties: [
                     'status_codigo',
-                    'dataFechamento'
+                    'dataFechamento',
+                    'slaStatus',
+                    'slaCriticidade'
                 ],
                 TargetEntities  : ['conversas']
-            } action  fecharIncidente();
-            @Common.SideEffects: {TargetProperties: [
-                'status_codigo',
-                'dataFechamento'
-            ],
-            TargetEntities : ['conversas']
+            } action fecharIncidente();
+            @Common.SideEffects: {
+                TargetProperties: [
+                    'status_codigo',
+                    'dataFechamento',
+                    'slaStatus',
+                    'slaCriticidade'
+                ],
+                TargetEntities  : ['conversas']
             } action reabrirIncidente();
         };
 

@@ -13,6 +13,8 @@ entity Incidente : managed {
     categoria : Association to Categoria;
     dataFechamento : Timestamp;
     conversas : Composition of many Conversa on conversas.incidente = $self;
+    slaStatus : String(20);
+    slaCriticidade: Integer;
 
 }
 
