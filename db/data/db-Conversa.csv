@@ -1,0 +1,7 @@
+ID,mensagem,incidente_ID,cliente_ID
+20000000-0000-0000-0000-000000000001,Chamado aberto pelo usuário,10000000-0000-0000-0000-000000000001,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+20000000-0000-0000-0000-000000000002,Equipamento encaminhado para análise,10000000-0000-0000-0000-000000000001,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+20000000-0000-0000-0000-000000000003,Solicitada evidência do erro apresentado,10000000-0000-0000-0000-000000000002,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+20000000-0000-0000-0000-000000000004,Usuário enviou captura de tela do problema,10000000-0000-0000-0000-000000000002,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+20000000-0000-0000-0000-000000000005,Aguardando retorno da equipe de infraestrutura,10000000-0000-0000-0000-000000000003,cccccccc-cccc-cccc-cccc-cccccccccccc
+20000000-0000-0000-0000-000000000006,Problema resolvido após reinstalação do driver,10000000-0000-0000-0000-000000000004,dddddddd-dddd-dddd-dddd-dddddddddddd

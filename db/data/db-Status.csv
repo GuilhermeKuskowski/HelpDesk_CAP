@@ -1,0 +1,7 @@
+codigo,nome,criticidade
+N,Novo,5
+A,Atribuído,2
+P,Em Andamento,2
+E,Em Espera,2
+R,Resolvido,3
+F,Fechado,3

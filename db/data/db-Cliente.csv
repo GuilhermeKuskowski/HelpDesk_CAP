@@ -1,0 +1,6 @@
+ID,nome,email,telefone,ativo
+aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa,João Silva,joao.silva@empresa.com.br,11999990001,true
+bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb,Maria Souza,maria.souza@empresa.com.br,11999990002,true
+cccccccc-cccc-cccc-cccc-cccccccccccc,Carlos Santos,carlos.santos@empresa.com.br,11999990003,true
+dddddddd-dddd-dddd-dddd-dddddddddddd,Ana Oliveira,ana.oliveira@empresa.com.br,11999990004,true
+99999999-9999-9999-9999-999999999999,Sistema,sistema@helpdesk.local,,true
