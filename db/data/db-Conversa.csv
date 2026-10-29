@@ -1,7 +1,51 @@
 ID,mensagem,incidente_ID,cliente_ID
-20000000-0000-0000-0000-000000000001,Chamado aberto pelo usuário,10000000-0000-0000-0000-000000000001,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
-20000000-0000-0000-0000-000000000002,Equipamento encaminhado para análise,10000000-0000-0000-0000-000000000001,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
-20000000-0000-0000-0000-000000000003,Solicitada evidência do erro apresentado,10000000-0000-0000-0000-000000000002,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
-20000000-0000-0000-0000-000000000004,Usuário enviou captura de tela do problema,10000000-0000-0000-0000-000000000002,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
-20000000-0000-0000-0000-000000000005,Aguardando retorno da equipe de infraestrutura,10000000-0000-0000-0000-000000000003,cccccccc-cccc-cccc-cccc-cccccccccccc
-20000000-0000-0000-0000-000000000006,Problema resolvido após reinstalação do driver,10000000-0000-0000-0000-000000000004,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000001,Notebook não liga após atualização.,00000000-0000-0000-0000-000000000001,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000002,Erro ao enviar e-mails externos.,00000000-0000-0000-0000-000000000002,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000003,VPN não conecta da residência.,00000000-0000-0000-0000-000000000003,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000004,Impressora sem papel no setor financeiro.,00000000-0000-0000-0000-000000000004,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000005,SAP apresenta lentidão nas transações.,00000000-0000-0000-0000-000000000005,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000006,Usuário bloqueado ao acessar sistema.,00000000-0000-0000-0000-000000000006,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000007,Monitor não exibe imagem.,00000000-0000-0000-0000-000000000007,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000008,Solicitação de redefinição de senha.,00000000-0000-0000-0000-000000000008,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000009,Wi-Fi desconecta frequentemente.,00000000-0000-0000-0000-000000000009,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000010,Teams fecha inesperadamente.,00000000-0000-0000-0000-000000000010,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000011,Mouse não responde aos cliques.,00000000-0000-0000-0000-000000000011,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000012,Falha durante atualização do Windows.,00000000-0000-0000-0000-000000000012,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000013,Acesso ao SAP foi negado.,00000000-0000-0000-0000-000000000013,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000014,Ramal telefônico não funciona.,00000000-0000-0000-0000-000000000014,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000015,Tela azul ao iniciar notebook.,00000000-0000-0000-0000-000000000015,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000016,Erro ao salvar pedido no ERP.,00000000-0000-0000-0000-000000000016,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000017,Sem acesso à rede corporativa.,00000000-0000-0000-0000-000000000017,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000018,Problema de áudio em reuniões.,00000000-0000-0000-0000-000000000018,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000019,Portal interno apresenta erro 500.,00000000-0000-0000-0000-000000000019,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000020,Scanner não digitaliza documentos.,00000000-0000-0000-0000-000000000020,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000021,Estação de trabalho muito lenta.,00000000-0000-0000-0000-000000000021,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000022,Acesso negado ao SharePoint.,00000000-0000-0000-0000-000000000022,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000023,Impressora sem driver instalado.,00000000-0000-0000-0000-000000000023,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000024,VPN apresenta lentidão excessiva.,00000000-0000-0000-0000-000000000024,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000025,Notebook trava após login.,00000000-0000-0000-0000-000000000025,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000026,Erro em macro do Excel.,00000000-0000-0000-0000-000000000026,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000027,Falha de autenticação remota.,00000000-0000-0000-0000-000000000027,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000028,Problema durante transporte SAP.,00000000-0000-0000-0000-000000000028,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000029,Monitor pisca constantemente.,00000000-0000-0000-0000-000000000029,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000030,E-mails ficam presos na fila.,00000000-0000-0000-0000-000000000030,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000031,Problema de conexão com banco de dados.,00000000-0000-0000-0000-000000000031,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000032,Solicitação de novo acesso.,00000000-0000-0000-0000-000000000032,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000033,Aplicação apresenta erro inesperado.,00000000-0000-0000-0000-000000000033,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000034,Sem acesso à impressora de rede.,00000000-0000-0000-0000-000000000034,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000035,Falha ao abrir anexos no Outlook.,00000000-0000-0000-0000-000000000035,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000036,Chamadas Teams sem áudio.,00000000-0000-0000-0000-000000000036,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000037,Problema de performance no SAP.,00000000-0000-0000-0000-000000000037,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000038,Falha de sincronização OneDrive.,00000000-0000-0000-0000-000000000038,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000039,Acesso remoto indisponível.,00000000-0000-0000-0000-000000000039,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000040,Erro de autenticação multifator.,00000000-0000-0000-0000-000000000040,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000041,Portal RH não carrega.,00000000-0000-0000-0000-000000000041,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000042,Solicitação de instalação de software.,00000000-0000-0000-0000-000000000042,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000043,Erro ao imprimir relatório.,00000000-0000-0000-0000-000000000043,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000044,Sem acesso à pasta compartilhada.,00000000-0000-0000-0000-000000000044,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000045,Falha na abertura do navegador corporativo.,00000000-0000-0000-0000-000000000045,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000046,VPN desconecta após alguns minutos.,00000000-0000-0000-0000-000000000046,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+10000000-0000-0000-0000-000000000047,Erro ao gerar relatório financeiro.,00000000-0000-0000-0000-000000000047,cccccccc-cccc-cccc-cccc-cccccccccccc
+10000000-0000-0000-0000-000000000048,Acesso ao ERP muito lento.,00000000-0000-0000-0000-000000000048,dddddddd-dddd-dddd-dddd-dddddddddddd
+10000000-0000-0000-0000-000000000049,Problema na autenticação do portal.,00000000-0000-0000-0000-000000000049,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+10000000-0000-0000-0000-000000000050,Solicitação de ajuste de permissões.,00000000-0000-0000-0000-000000000050,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
