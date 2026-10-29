@@ -14,7 +14,9 @@ export default class ServiceDesk extends cds.ApplicationService {
             const incidente = await SELECT.one
                 .from(Incidentes)
                 .where({ ID: incidenteID })
-
+            if (incidente.status_codigo === 'F') {
+                req.reject('O incidente já está fechado.')
+            }
             if (!incidente.descricaoResolucao) {
                 req.reject('Informe a resolução antes de fechar o incidente!')
             }
@@ -36,7 +38,16 @@ export default class ServiceDesk extends cds.ApplicationService {
 
         this.on('reabrirIncidente', async req => {
 
+
             const incidenteID = req.params[0].ID
+
+            const incidente = await SELECT.one
+                .from(Incidentes)
+                .where({ ID: incidenteID })
+
+            if (incidente.status_codigo !== 'F') {
+                req.reject('Somente incidentes fechados podem ser reabertos.')
+            }
 
             await UPDATE(Incidentes)
                 .set({
@@ -44,6 +55,8 @@ export default class ServiceDesk extends cds.ApplicationService {
                     dataFechamento: null
                 })
                 .where({ ID: incidenteID })
+
+
 
             await INSERT.into(Conversas).entries({
                 mensagem: 'Status alterado para Em andamento.',
