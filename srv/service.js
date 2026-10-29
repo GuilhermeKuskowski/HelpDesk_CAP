@@ -27,7 +27,7 @@ export default class ServiceDesk extends cds.ApplicationService {
                 .where({ ID: incidenteID })
 
             await INSERT.into(Conversas).entries({
-                mensagem: 'Incidente fechado.',
+                mensagem: 'Status alterado para Fechado.',
                 incidente_ID: incidenteID,
                 cliente_ID: '99999999-9999-9999-9999-999999999999'
             })
@@ -46,7 +46,7 @@ export default class ServiceDesk extends cds.ApplicationService {
                 .where({ ID: incidenteID })
 
             await INSERT.into(Conversas).entries({
-                mensagem: 'Incidente reaberto.',
+                mensagem: 'Status alterado para Em andamento.',
                 incidente_ID: incidenteID,
                 cliente_ID: '99999999-9999-9999-9999-999999999999'
             })
