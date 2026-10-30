@@ -27,6 +27,29 @@ export default class ServiceDesk extends cds.ApplicationService {
 
         }
 
+        function calcularTempoResolucao(createdAt, dataFechamento) {
+            const inicio = new Date(createdAt)
+            const fim = new Date(dataFechamento)
+
+            const dif = fim - inicio
+
+            const dias = Math.floor(dif / (1000 * 60 * 60 * 24))
+
+            const horas = Math.floor(dif % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+
+            const minutos = Math.floor(dif % (1000 * 60 * 60) / (1000 * 60))
+
+            if (dias > 0) {
+                return `${dias} dia(s) e ${horas} hora(s)`
+            }
+
+            if (horas > 0) {
+                return `${dias} dia(s) e ${minutos} minuto(s)`
+            }
+            return `${minutos} minuto(s)`
+
+        }
+
         const { Incidentes, Conversas } = this.entities
 
         this.on('fecharIncidente', async req => {
@@ -46,6 +69,10 @@ export default class ServiceDesk extends cds.ApplicationService {
             }
 
             const dataFechamento = new Date()
+            const tempoResolucao = calcularTempoResolucao(
+                incidente.createdAt,
+                dataFechamento
+            )
 
             const sla = calcularSLA(
                 incidente.createdAt,
@@ -57,7 +84,8 @@ export default class ServiceDesk extends cds.ApplicationService {
                     status_codigo: 'F',
                     dataFechamento,
                     slaStatus: sla.slaStatus,
-                    slaCriticidade: sla.slaCriticidade
+                    slaCriticidade: sla.slaCriticidade,
+                    tempoResolucao : tempoResolucao
                 })
                 .where({ ID: incidenteID })
 
@@ -86,7 +114,8 @@ export default class ServiceDesk extends cds.ApplicationService {
                     status_codigo: 'P',
                     dataFechamento: null,
                     slaStatus: null,
-                    slaCriticidade: null
+                    slaCriticidade: null,
+                    tempoResolucao: null
                 })
                 .where({ ID: incidenteID })
 

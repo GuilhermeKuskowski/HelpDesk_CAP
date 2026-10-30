@@ -15,6 +15,7 @@ entity Incidente : managed {
     conversas : Composition of many Conversa on conversas.incidente = $self;
     slaStatus : String(20);
     slaCriticidade: Integer;
+    tempoResolucao : String(50);
 
 }
 

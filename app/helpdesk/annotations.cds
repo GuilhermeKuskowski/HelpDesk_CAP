@@ -133,6 +133,11 @@ annotate service.Incidentes with @(
                 Value: dataFechamento,
                 Label: 'Data de Fechamento',
             },
+            {
+                $Type : 'UI.DataField',
+                Value : tempoResolucao,
+                Label : 'Tempo de Resolução',
+            },
         ],
     },
     UI.FieldGroup #Conversas     : {
@@ -267,6 +272,18 @@ annotate service.Conversas with {
     cliente @(
         Common.Text                    : cliente.nome,
         Common.Text.@UI.TextArrangement: #TextOnly,
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Clientes',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : cliente_ID,
+                    ValueListProperty : 'ID',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
     )
 };
 

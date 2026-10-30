@@ -9,7 +9,8 @@ service ServiceDesk {
                     'status_codigo',
                     'dataFechamento',
                     'slaStatus',
-                    'slaCriticidade'
+                    'slaCriticidade',
+                    'tempoResolucao'
                 ],
                 TargetEntities  : ['conversas']
             } action fecharIncidente();
@@ -18,7 +19,8 @@ service ServiceDesk {
                     'status_codigo',
                     'dataFechamento',
                     'slaStatus',
-                    'slaCriticidade'
+                    'slaCriticidade',
+                    'tempoResolucao'
                 ],
                 TargetEntities  : ['conversas']
             } action reabrirIncidente();
