@@ -44,7 +44,7 @@ export default class ServiceDesk extends cds.ApplicationService {
             }
 
             if (horas > 0) {
-                return `${dias} dia(s) e ${minutos} minuto(s)`
+                return `${horas} hora(s) e ${minutos} minuto(s)`
             }
             return `${minutos} minuto(s)`
 
@@ -85,7 +85,7 @@ export default class ServiceDesk extends cds.ApplicationService {
                     dataFechamento,
                     slaStatus: sla.slaStatus,
                     slaCriticidade: sla.slaCriticidade,
-                    tempoResolucao : tempoResolucao
+                    tempoResolucao: tempoResolucao
                 })
                 .where({ ID: incidenteID })
 
@@ -144,6 +144,8 @@ export default class ServiceDesk extends cds.ApplicationService {
                 .from(Incidentes)
                 .where({ ID: req.data.ID })
 
+
+
             if (incidente?.status_codigo === 'F') {
                 req.reject(
                     'Incidentes fechados não podem ser alterados. Reabra o incidente primeiro.'
@@ -169,7 +171,7 @@ export default class ServiceDesk extends cds.ApplicationService {
             ) {
                 req.data.dataFechamento = null
             }
-
+        
         })
 
         return super.init()
