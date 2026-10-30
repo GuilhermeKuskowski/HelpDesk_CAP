@@ -15,6 +15,11 @@ annotate service.Incidentes with @(
                 Label: 'Cliente',
             },
             {
+                $Type : 'UI.DataField',
+                Value : responsavel.nome,
+                Label : 'Responsável',
+            },
+            {
                 $Type: 'UI.DataField',
                 Label: 'Status',
                 Value: status_codigo,
@@ -39,7 +44,7 @@ annotate service.Incidentes with @(
                 Label      : 'SLA',
                 Value      : slaStatus,
                 Criticality: slaCriticidade,
-            }
+            },
         ],
     },
     UI.Facets                    : [
@@ -80,6 +85,11 @@ annotate service.Incidentes with @(
             Label: 'Cliente',
         },
         {
+            $Type : 'UI.DataField',
+            Value : responsavel.nome,
+            Label : 'Responsável',
+        },
+        {
             $Type: 'UI.DataField',
             Value: categoria.nome,
             Label: 'Categoria',
@@ -102,7 +112,7 @@ annotate service.Incidentes with @(
             Label      : 'SLA',
             Value      : slaStatus,
             Criticality: slaCriticidade,
-        }
+        },
     ],
     UI.HeaderInfo                : {
         Title         : {
@@ -333,3 +343,19 @@ annotate service.Categoria with {
         Common.Text.@UI.TextArrangement: #TextOnly,
     )
 };
+annotate service.Analista with {
+    nome @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Analista',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : nome,
+                    ValueListProperty : 'nome',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+)};
+

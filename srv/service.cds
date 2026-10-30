@@ -28,6 +28,7 @@ service ServiceDesk {
 
     entity Clientes   as projection on db.Cliente;
     entity Conversas  as projection on db.Conversa;
+    entity Analista as projection on db.Analista;
 
     @readonly
     entity Status     as projection on db.Status;

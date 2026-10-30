@@ -16,6 +16,7 @@ entity Incidente : managed {
     slaStatus : String(20);
     slaCriticidade: Integer;
     tempoResolucao : String(50);
+    responsavel : Association to Analista;
 
 }
 
@@ -52,4 +53,10 @@ entity Conversa : managed {
     mensagem : LargeString;
     incidente : Association to Incidente;
     cliente : Association to Cliente;
+}
+
+entity Analista {
+    key ID : UUID;
+    nome : String(100);
+    email : String(255);
 }
